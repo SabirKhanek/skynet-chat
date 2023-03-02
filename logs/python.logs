@@ -1,0 +1,43 @@
+
+C:\xampp\htdocs\testwp\wp-admin>cd C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\ 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>REM Check if pip is installed 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>pip show pip   2>nul  | find "Name: pip"  1>nul 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>if 0 NEQ 0 (
+echo pip not found, installing pip...  
+ echo pip not found, installing pip...  1>>logs/requirements.logs  
+ python -m ensurepip --upgrade  1>>logs/requirements.logs 2>&1 
+) 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>REM Check if virtualenv is installed 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>pip show virtualenv   2>nul  | find "Name: virtualenv"  1>nul 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>if 0 NEQ 0 (
+echo virtualenv not found, installing virtualenv...  
+ echo virtualenv not found, installing virtualenv...  1>>logs/requirements.logs  
+ pip install virtualenv  1>>logs/requirements.logs 2>&1 
+) 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>REM Create virtual environment 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>virtualenv skynet-py  1>>logs/requirements.logs 2>&1 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>REM Change directory to virtual environment 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat>cd skynet-py 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py>REM Activate virtual environment 
+
+C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py>call Scripts\activate 
+
+(skynet-py) C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py>REM Install packages from requirements.txt 
+
+(skynet-py) C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py>pip install -r .\requirements.txt  1>>..\logs\requirements.logs 2>&1 
+
+(skynet-py) C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py>echo Done! 
+Done!
+
+(skynet-py) C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py>python server.py  1>>..\logs\py_server.logs 2>&1 

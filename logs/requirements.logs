@@ -1,0 +1,231 @@
+created virtual environment CPython3.11.2.final.0-64 in 1736ms
+  creator CPython3Windows(dest=C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\User\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==23.0, setuptools==67.1.0, wheel==0.38.4
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+Collecting aiohttp==3.8.4
+  Using cached aiohttp-3.8.4-cp311-cp311-win_amd64.whl (317 kB)
+Collecting aiosignal==1.3.1
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout==4.0.2
+  Using cached async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting attrs==22.2.0
+  Using cached attrs-22.2.0-py3-none-any.whl (60 kB)
+Collecting certifi==2022.12.7
+  Using cached certifi-2022.12.7-py3-none-any.whl (155 kB)
+Collecting charset-normalizer==3.0.1
+  Using cached charset_normalizer-3.0.1-cp311-cp311-win_amd64.whl (96 kB)
+Collecting click==8.1.3
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting colorama==0.4.6
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting Flask==2.2.3
+  Using cached Flask-2.2.3-py3-none-any.whl (101 kB)
+Collecting Flask-Cors==3.0.10
+  Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting frozenlist==1.3.3
+  Using cached frozenlist-1.3.3-cp311-cp311-win_amd64.whl (32 kB)
+Collecting idna==3.4
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting itsdangerous==2.1.2
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Jinja2==3.1.2
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting MarkupSafe==2.1.2
+  Using cached MarkupSafe-2.1.2-cp311-cp311-win_amd64.whl (16 kB)
+Collecting multidict==6.0.4
+  Using cached multidict-6.0.4-cp311-cp311-win_amd64.whl (28 kB)
+Collecting openai==0.26.5
+  Using cached openai-0.26.5-py3-none-any.whl
+Collecting requests==2.28.2
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Collecting six==1.16.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting tqdm==4.64.1
+  Using cached tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+Collecting urllib3==1.26.14
+  Using cached urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+Collecting Werkzeug==2.2.3
+  Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Collecting yarl==1.8.2
+  Using cached yarl-1.8.2-cp311-cp311-win_amd64.whl (55 kB)
+Installing collected packages: charset-normalizer, urllib3, six, multidict, MarkupSafe, itsdangerous, idna, frozenlist, colorama, certifi, attrs, async-timeout, yarl, Werkzeug, tqdm, requests, Jinja2, click, aiosignal, Flask, aiohttp, openai, Flask-Cors
+Successfully installed Flask-2.2.3 Flask-Cors-3.0.10 Jinja2-3.1.2 MarkupSafe-2.1.2 Werkzeug-2.2.3 aiohttp-3.8.4 aiosignal-1.3.1 async-timeout-4.0.2 attrs-22.2.0 certifi-2022.12.7 charset-normalizer-3.0.1 click-8.1.3 colorama-0.4.6 frozenlist-1.3.3 idna-3.4 itsdangerous-2.1.2 multidict-6.0.4 openai-0.26.5 requests-2.28.2 six-1.16.0 tqdm-4.64.1 urllib3-1.26.14 yarl-1.8.2
+
+[notice] A new release of pip is available: 23.0 -> 23.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+created virtual environment CPython3.11.2.final.0-64 in 3750ms
+  creator CPython3Windows(dest=C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\User\AppData\Local\pypa\virtualenv)
+    added seed packages: Flask==2.2.3, Flask_Cors==3.0.10, Jinja2==3.1.2, MarkupSafe==2.1.2, Werkzeug==2.2.3, aiohttp==3.8.4, aiosignal==1.3.1, async_timeout==4.0.2, attrs==22.2.0, certifi==2022.12.7, charset_normalizer==3.0.1, click==8.1.3, colorama==0.4.6, frozenlist==1.3.3, idna==3.4, itsdangerous==2.1.2, multidict==6.0.4, openai==0.26.5, pip==23.0, requests==2.28.2, setuptools==67.1.0, six==1.16.0, tqdm==4.64.1, urllib3==1.26.14, wheel==0.38.4, yarl==1.8.2
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+Requirement already satisfied: aiohttp==3.8.4 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 1)) (3.8.4)
+Requirement already satisfied: aiosignal==1.3.1 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: async-timeout==4.0.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 3)) (4.0.2)
+Requirement already satisfied: attrs==22.2.0 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 4)) (22.2.0)
+Requirement already satisfied: certifi==2022.12.7 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 5)) (2022.12.7)
+Requirement already satisfied: charset-normalizer==3.0.1 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 6)) (3.0.1)
+Requirement already satisfied: click==8.1.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 7)) (8.1.3)
+Requirement already satisfied: colorama==0.4.6 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 8)) (0.4.6)
+Requirement already satisfied: Flask==2.2.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 9)) (2.2.3)
+Requirement already satisfied: Flask-Cors==3.0.10 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 10)) (3.0.10)
+Requirement already satisfied: frozenlist==1.3.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 11)) (1.3.3)
+Requirement already satisfied: idna==3.4 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 12)) (3.4)
+Requirement already satisfied: itsdangerous==2.1.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 13)) (2.1.2)
+Requirement already satisfied: Jinja2==3.1.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 14)) (3.1.2)
+Requirement already satisfied: MarkupSafe==2.1.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 15)) (2.1.2)
+Requirement already satisfied: multidict==6.0.4 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 16)) (6.0.4)
+Requirement already satisfied: openai==0.26.5 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 17)) (0.26.5)
+Requirement already satisfied: requests==2.28.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 18)) (2.28.2)
+Requirement already satisfied: six==1.16.0 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 19)) (1.16.0)
+Requirement already satisfied: tqdm==4.64.1 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 20)) (4.64.1)
+Requirement already satisfied: urllib3==1.26.14 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 21)) (1.26.14)
+Requirement already satisfied: Werkzeug==2.2.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 22)) (2.2.3)
+Requirement already satisfied: yarl==1.8.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 23)) (1.8.2)
+
+[notice] A new release of pip is available: 23.0 -> 23.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+created virtual environment CPython3.11.2.final.0-64 in 7601ms
+  creator CPython3Windows(dest=C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\User\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==23.0, setuptools==67.1.0, wheel==0.38.4
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+Collecting aiohttp==3.8.4
+  Using cached aiohttp-3.8.4-cp311-cp311-win_amd64.whl (317 kB)
+Collecting aiosignal==1.3.1
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout==4.0.2
+  Using cached async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting attrs==22.2.0
+  Using cached attrs-22.2.0-py3-none-any.whl (60 kB)
+Collecting certifi==2022.12.7
+  Using cached certifi-2022.12.7-py3-none-any.whl (155 kB)
+Collecting charset-normalizer==3.0.1
+  Using cached charset_normalizer-3.0.1-cp311-cp311-win_amd64.whl (96 kB)
+Collecting click==8.1.3
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting colorama==0.4.6
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting Flask==2.2.3
+  Using cached Flask-2.2.3-py3-none-any.whl (101 kB)
+Collecting Flask-Cors==3.0.10
+  Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting frozenlist==1.3.3
+  Using cached frozenlist-1.3.3-cp311-cp311-win_amd64.whl (32 kB)
+Collecting idna==3.4
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting itsdangerous==2.1.2
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Jinja2==3.1.2
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting MarkupSafe==2.1.2
+  Using cached MarkupSafe-2.1.2-cp311-cp311-win_amd64.whl (16 kB)
+Collecting multidict==6.0.4
+  Using cached multidict-6.0.4-cp311-cp311-win_amd64.whl (28 kB)
+Collecting openai==0.26.5
+  Using cached openai-0.26.5-py3-none-any.whl
+Collecting requests==2.28.2
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Collecting six==1.16.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting tqdm==4.64.1
+  Using cached tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+Collecting urllib3==1.26.14
+  Using cached urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+Collecting Werkzeug==2.2.3
+  Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Collecting yarl==1.8.2
+  Using cached yarl-1.8.2-cp311-cp311-win_amd64.whl (55 kB)
+Installing collected packages: charset-normalizer, urllib3, six, multidict, MarkupSafe, itsdangerous, idna, frozenlist, colorama, certifi, attrs, async-timeout, yarl, Werkzeug, tqdm, requests, Jinja2, click, aiosignal, Flask, aiohttp, openai, Flask-Cors
+Successfully installed Flask-2.2.3 Flask-Cors-3.0.10 Jinja2-3.1.2 MarkupSafe-2.1.2 Werkzeug-2.2.3 aiohttp-3.8.4 aiosignal-1.3.1 async-timeout-4.0.2 attrs-22.2.0 certifi-2022.12.7 charset-normalizer-3.0.1 click-8.1.3 colorama-0.4.6 frozenlist-1.3.3 idna-3.4 itsdangerous-2.1.2 multidict-6.0.4 openai-0.26.5 requests-2.28.2 six-1.16.0 tqdm-4.64.1 urllib3-1.26.14 yarl-1.8.2
+
+[notice] A new release of pip is available: 23.0 -> 23.0.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+created virtual environment CPython3.11.2.final.0-64 in 14020ms
+  creator CPython3Windows(dest=C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\User\AppData\Local\pypa\virtualenv)
+    added seed packages: Flask==2.2.3, Flask_Cors==3.0.10, Jinja2==3.1.2, MarkupSafe==2.1.2, Werkzeug==2.2.3, aiohttp==3.8.4, aiosignal==1.3.1, async_timeout==4.0.2, attrs==22.2.0, certifi==2022.12.7, charset_normalizer==3.0.1, click==8.1.3, colorama==0.4.6, frozenlist==1.3.3, idna==3.4, itsdangerous==2.1.2, multidict==6.0.4, openai==0.26.5, pip==23.0.1, requests==2.28.2, setuptools==67.1.0, six==1.16.0, tqdm==4.64.1, urllib3==1.26.14, wheel==0.38.4, yarl==1.8.2
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+Requirement already satisfied: aiohttp==3.8.4 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 1)) (3.8.4)
+Requirement already satisfied: aiosignal==1.3.1 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: async-timeout==4.0.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 3)) (4.0.2)
+Requirement already satisfied: attrs==22.2.0 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 4)) (22.2.0)
+Requirement already satisfied: certifi==2022.12.7 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 5)) (2022.12.7)
+Requirement already satisfied: charset-normalizer==3.0.1 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 6)) (3.0.1)
+Requirement already satisfied: click==8.1.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 7)) (8.1.3)
+Requirement already satisfied: colorama==0.4.6 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 8)) (0.4.6)
+Requirement already satisfied: Flask==2.2.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 9)) (2.2.3)
+Requirement already satisfied: Flask-Cors==3.0.10 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 10)) (3.0.10)
+Requirement already satisfied: frozenlist==1.3.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 11)) (1.3.3)
+Requirement already satisfied: idna==3.4 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 12)) (3.4)
+Requirement already satisfied: itsdangerous==2.1.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 13)) (2.1.2)
+Requirement already satisfied: Jinja2==3.1.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 14)) (3.1.2)
+Requirement already satisfied: MarkupSafe==2.1.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 15)) (2.1.2)
+Requirement already satisfied: multidict==6.0.4 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 16)) (6.0.4)
+Requirement already satisfied: openai==0.26.5 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 17)) (0.26.5)
+Requirement already satisfied: requests==2.28.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 18)) (2.28.2)
+Requirement already satisfied: six==1.16.0 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 19)) (1.16.0)
+Requirement already satisfied: tqdm==4.64.1 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 20)) (4.64.1)
+Requirement already satisfied: urllib3==1.26.14 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 21)) (1.26.14)
+Requirement already satisfied: Werkzeug==2.2.3 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 22)) (2.2.3)
+Requirement already satisfied: yarl==1.8.2 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from -r .\requirements.txt (line 23)) (1.8.2)
+created virtual environment CPython3.11.2.final.0-64 in 13316ms
+  creator CPython3Windows(dest=C:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=C:\Users\User\AppData\Local\pypa\virtualenv)
+    added seed packages: pip==23.0.1, setuptools==67.1.0, wheel==0.38.4
+  activators BashActivator,BatchActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.org', port=443): Read timed out. (read timeout=15)")': /simple/aiohttp/
+WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError("HTTPSConnectionPool(host='pypi.org', port=443): Read timed out. (read timeout=15)")': /simple/aiohttp/
+WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /simple/aiohttp/
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x0000022C95ED0890>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /simple/aiohttp/
+Collecting aiohttp==3.8.4
+  Using cached aiohttp-3.8.4-cp311-cp311-win_amd64.whl (317 kB)
+Collecting aiosignal==1.3.1
+  Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting async-timeout==4.0.2
+  Using cached async_timeout-4.0.2-py3-none-any.whl (5.8 kB)
+Collecting attrs==22.2.0
+  Using cached attrs-22.2.0-py3-none-any.whl (60 kB)
+Collecting certifi==2022.12.7
+  Using cached certifi-2022.12.7-py3-none-any.whl (155 kB)
+Collecting charset-normalizer==3.0.1
+  Using cached charset_normalizer-3.0.1-cp311-cp311-win_amd64.whl (96 kB)
+Collecting click==8.1.3
+  Using cached click-8.1.3-py3-none-any.whl (96 kB)
+Collecting colorama==0.4.6
+  Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Collecting Flask==2.2.3
+  Using cached Flask-2.2.3-py3-none-any.whl (101 kB)
+Collecting Flask-Cors==3.0.10
+  Using cached Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting frozenlist==1.3.3
+  Using cached frozenlist-1.3.3-cp311-cp311-win_amd64.whl (32 kB)
+Collecting gunicorn==20.1.0
+  Using cached gunicorn-20.1.0-py3-none-any.whl (79 kB)
+Collecting idna==3.4
+  Using cached idna-3.4-py3-none-any.whl (61 kB)
+Collecting itsdangerous==2.1.2
+  Using cached itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Jinja2==3.1.2
+  Using cached Jinja2-3.1.2-py3-none-any.whl (133 kB)
+Collecting MarkupSafe==2.1.2
+  Using cached MarkupSafe-2.1.2-cp311-cp311-win_amd64.whl (16 kB)
+Collecting multidict==6.0.4
+  Using cached multidict-6.0.4-cp311-cp311-win_amd64.whl (28 kB)
+Collecting openai==0.27.0
+  Using cached openai-0.27.0-py3-none-any.whl (70 kB)
+Collecting requests==2.28.2
+  Using cached requests-2.28.2-py3-none-any.whl (62 kB)
+Collecting six==1.16.0
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting tqdm==4.64.1
+  Using cached tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+Collecting urllib3==1.26.14
+  Using cached urllib3-1.26.14-py2.py3-none-any.whl (140 kB)
+Collecting Werkzeug==2.2.3
+  Using cached Werkzeug-2.2.3-py3-none-any.whl (233 kB)
+Collecting yarl==1.8.2
+  Using cached yarl-1.8.2-cp311-cp311-win_amd64.whl (55 kB)
+Requirement already satisfied: setuptools>=3.0 in c:\xampp\htdocs\testwp\wp-content\plugins\skynet-chat\skynet-py\lib\site-packages (from gunicorn==20.1.0->-r .\requirements.txt (line 12)) (67.1.0)
+Installing collected packages: charset-normalizer, urllib3, six, multidict, MarkupSafe, itsdangerous, idna, gunicorn, frozenlist, colorama, certifi, attrs, async-timeout, yarl, Werkzeug, tqdm, requests, Jinja2, click, aiosignal, Flask, aiohttp, openai, Flask-Cors
+Successfully installed Flask-2.2.3 Flask-Cors-3.0.10 Jinja2-3.1.2 MarkupSafe-2.1.2 Werkzeug-2.2.3 aiohttp-3.8.4 aiosignal-1.3.1 async-timeout-4.0.2 attrs-22.2.0 certifi-2022.12.7 charset-normalizer-3.0.1 click-8.1.3 colorama-0.4.6 frozenlist-1.3.3 gunicorn-20.1.0 idna-3.4 itsdangerous-2.1.2 multidict-6.0.4 openai-0.27.0 requests-2.28.2 six-1.16.0 tqdm-4.64.1 urllib3-1.26.14 yarl-1.8.2
