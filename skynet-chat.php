@@ -67,9 +67,18 @@ function skynet_chat_config_page()
 <?php
 }
 
+function skynet_chat_config_page_2()
+{
+    if (!current_user_can("manage_options")) {
+        wp_die("You do not have sufficient permissions to access this page.");
+    }
+    include plugin_dir_path(__FILE__) . "/keygen_page.php";
+}
+
 function skynet_chat_config_menu()
 {
     add_options_page("Skynet Config", "Skynet Configuration", "manage_options", "skynet-chat-config", "skynet_chat_config_page", 6);
+    add_options_page("Skynet Config", "Skynet license keygen", "manage_options", "skynet-chat-config_2", "skynet_chat_config_page_2", 7);
 }
 
 add_action("admin_menu", "skynet_chat_config_menu");

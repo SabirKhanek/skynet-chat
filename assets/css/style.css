@@ -37,25 +37,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
     overflow: hidden;
-    z-index: 999;
-}
-
-@media (max-width: 768px) {
-
-    /* Adjust chat box width for smaller screens */
-    #skynet-chat-box {
-        width: 350px;
-        max-width: none;
-    }
-}
-
-@media (max-height: 480px) {
-
-    /* Adjust chat box height for smaller screens */
-    #skynet-chat-box {
-        width: 350px;
-        height: 70vh;
-    }
+    z-index: 10000;
 }
 
 
@@ -72,6 +54,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 10000;
 }
 
 #toggle-chat i {
@@ -102,6 +85,7 @@
     right: 20px;
     /* position it at the right of the screen */
     overflow: scroll;
+    z-index: 10000;
     /* enable scrolling */
 }
 
@@ -163,6 +147,7 @@
     align-items: center;
     margin-left: 8px;
     padding: 0;
+    cursor: pointer;
 }
 
 .skynet_msg_left,
@@ -269,4 +254,38 @@
 #voice-button i {
     font-size: 12px;
     line-height: 1;
+}
+
+@media (max-width: 1216px) {
+
+    /* Adjust chat box width for smaller screens */
+    #skynet-chat-box {
+        width: 350px;
+        max-width: none;
+        bottom: 120px;
+        z-index: 100000;
+    }
+
+    #skynet-chat-box.expanded {
+        width: 350px;
+        bottom: 120px;
+        z-index: 100000;
+    }
+
+    #toggle-chat {
+        bottom: 70px
+    }
+
+    #robot {
+        width: 350px;
+    }
+}
+
+@media (max-height: 480px) {
+
+    /* Adjust chat box height for smaller screens */
+    #skynet-chat-box {
+        width: 300px;
+        height: 70vh;
+    }
 }

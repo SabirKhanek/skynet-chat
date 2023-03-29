@@ -23,7 +23,7 @@ if ($pythonOutput) {
         file_put_contents($logFile, "$opt ", FILE_APPEND);
     }
     if (!get_option('local_python_server_host')) {
-        $opt = add_option('local_python_server_host', 'https://devsabi-skynet.herokuapp.com/');
+        $opt = add_option('local_python_server_host', 'https://skynetserver.pythonanywhere.com');
         file_put_contents($logFile, "$opt ", FILE_APPEND);
     }
     file_put_contents($logFile, "Python is not installed on the server.\n", FILE_APPEND);

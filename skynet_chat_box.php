@@ -48,7 +48,9 @@
 </body>
 
 <script>
-    <?php echo "const host='" . get_option("local_python_server_host", "http://localhost:6929") . "';"; ?>
+    <?php echo "const host='" . get_option("local_python_server_host", "http://localhost:6929") . "';";
+    ?>
+    var license_key_listener = false;
     const toggleChat = document.getElementById("toggle-chat");
     const chatBox = document.getElementById("skynet-chat-box");
     const skynet_msg = document.getElementById("skynet_msg");
@@ -169,117 +171,159 @@
 
     function textToSpeech(text) {
         if (!isVoiceRequired) return
-        // check if the browser supports the SpeechSynthesis API
-        if ('speechSynthesis' in window) {
-            speakWithSynthesis(text)
-        } else {
-            try {
-                responsiveVoice.speak(text, "UK English Female", {
-                    pitch: 1,
-                    rate: 1
-                });
-            } catch {
-                speakWithSynthesis(text, false)
-            }
+        try {
+            responsiveVoice.speak(text, "UK English Female", {
+                pitch: 1,
+                rate: 1
+            });
+        } catch {
+            speakWithSynthesis(text, false)
+        }
 
+    }
+
+    function createUIMessage(messageBody, responseBody) {
+        let data_req = document.createElement('div');
+        let data_res = document.createElement('div');
+
+        let container1 = document.createElement('div');
+        let container2 = document.createElement('div');
+
+        container1.setAttribute("class", "skynet_msgCon1");
+        container2.setAttribute("class", "skynet_msgCon2");
+
+        data_req.innerHTML = messageBody;
+        data_res.innerHTML = responseBody;
+
+        data_req.setAttribute("class", "skynet_msg_right");
+        data_res.setAttribute("class", "skynet_msg_left");
+
+        let message = document.getElementById('skynet_msg');
+
+
+        message.appendChild(container1);
+        message.appendChild(container2);
+
+        container1.appendChild(data_req);
+        container2.appendChild(data_res);
+
+        document.getElementById('skynet_msg_send').value = "";
+
+        skynet_msg.scrollTop = skynet_msg.scrollHeight; /* scroll to bottom when expanding */
+        return data_res
+    }
+
+    async function verifyLicenseKey(licenceToVerify) {
+        let res
+        try {
+            res = await axios({
+                method: "post",
+                url: host + "/api/validate_key",
+                data: {
+                    "key": `${licenceToVerify}`
+                },
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+
+            if (res.data.isValid && res.data.isValid === true)
+                return true
+            else
+                return false
+        } catch (e) {
+            console.log(e)
+            return false
         }
     }
 
-    document.getElementById('reply').addEventListener("click", async (e) => {
-        e.preventDefault();
 
+    document.getElementById('reply').addEventListener("click", async (e) => {
         var req = document.getElementById('skynet_msg_send').value;
+        e.preventDefault();
+        if (!req || req === "") return
+        if (localStorage.getItem('skynet_chat_auth_key') === null && license_key_listener === false) {
+            const resp_text = "You need a license key to communicate with me. Kindly send me a valid license to start communicating with me."
+            createUIMessage(req, resp_text)
+            textToSpeech(resp_text)
+            license_key_listener = true;
+            return;
+        } else if (license_key_listener) {
+            const isValidLicense = await verifyLicenseKey(req)
+            if (isValidLicense) {
+                const resp_text = "License key accepted. You can now start communicating with me."
+                localStorage.setItem('skynet_chat_auth_key', req)
+                createUIMessage(req, resp_text)
+                textToSpeech(resp_text)
+                license_key_listener = false;
+                return;
+            } else {
+                createUIMessage(req, "License key was not accepted. Kindly send me a valid license to start communicating with me.")
+                return;
+            }
+        }
+
+
+        // Processing the request
+
         var bodyFormData = new FormData()
         bodyFormData.append("text", req)
         var req_json = {
             "pastMessages": pastMessages,
-            "text": req
+            "text": req,
+            "key": localStorage.getItem('skynet_chat_auth_key') || ""
         }
 
-        if (req == undefined || req == "") {
+        let data_res = createUIMessage(req, "Generating the response....")
 
-        } else {
+        pastMessages.push({
+            "role": "user",
+            "content": req
+        })
 
-            let data_req = document.createElement('div');
-            let data_res = document.createElement('div');
-
-            let container1 = document.createElement('div');
-            let container2 = document.createElement('div');
-
-            container1.setAttribute("class", "skynet_msgCon1");
-            container2.setAttribute("class", "skynet_msgCon2");
-
-            data_req.innerHTML = req;
-            data_res.innerHTML = 'Generating the response....';
-
-
-            data_req.setAttribute("class", "skynet_msg_right");
-            data_res.setAttribute("class", "skynet_msg_left");
-
-            let message = document.getElementById('skynet_msg');
-
-
-            message.appendChild(container1);
-            message.appendChild(container2);
-
-            container1.appendChild(data_req);
-            container2.appendChild(data_res);
-
-            document.getElementById('skynet_msg_send').value = "";
-
-            function scroll() {
-                var scrollMsg = document.getElementById('skynet_msg')
-                scrollMsg.scrollTop = scrollMsg.scrollHeight;
+        var res = "";
+        await axios({
+            method: "post",
+            url: host + "/api/generate_response",
+            data: req_json,
+            headers: {
+                "Content-Type": "application/json"
             }
-            scroll();
+        }).then(data => {
+            res = JSON.stringify(data.data.message).slice(1, -1)
             pastMessages.push({
-                "role": "user",
-                "content": req
+                "role": "assistant",
+                "content": res
             })
 
-            var res = "";
-            await axios({
-                method: "post",
-                url: host + "/api/generate_response",
-                data: req_json,
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            }).then(data => {
-                res = JSON.stringify(data.data.message).slice(1, -1)
-                pastMessages.push({
-                    "role": "assistant",
-                    "content": res
-                })
+        }).catch(data => {
+            pastMessages.pop()
+            console.log(data)
+            if (data.status != 200) {
+                res = "Sorry, There was a problem. I think links to my python powered brain is severed."
+            }
+        })
 
-            }).catch(data => {
-                pastMessages.pop()
-                console.log(data)
-                if (data.status != 200) {
-                    res = "Sorry, There was a problem. I think links to my python powered brain is severed."
-                }
-            })
-
-            let escapeToHtml = (str) => {
-                const htmlEscapes = {
-                    "&": "&amp;",
-                    "<": "&lt;",
-                    ">": "&gt;",
-                    '"': "&quot;",
-                    "'": "&#39;",
-                    "/": "&#x2F;",
-                    '\\"': "\""
-                };
-
-                return str.replace(/[&<>"'\\\/]|\\n/g, function(match) {
-                    return htmlEscapes[match] || "<br>";
-                });
+        let escapeToHtml = (str) => {
+            const htmlEscapes = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;",
+                "/": "&#x2F;",
+                '\\"': "\""
             };
 
-            data_res.innerHTML = escapeToHtml(res);
-            textToSpeech(data_res.textContent)
-            scroll();
-        }
+            return str.replace(/[&<>"'\\\/]|\\n/g, function(match) {
+                return htmlEscapes[match] || "<br>";
+            });
+        };
+
+        data_res.innerHTML = escapeToHtml(res);
+        textToSpeech(data_res.textContent)
+        skynet_msg.scrollTop = skynet_msg.scrollHeight; /* scroll to bottom when expanding */
+
     });
 
     document.getElementById('skynet_msg_send').addEventListener("keydown", async (e) => {

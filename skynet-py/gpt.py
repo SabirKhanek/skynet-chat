@@ -1,7 +1,10 @@
 import openai
+import os
 
-##### USE YOUR OWN API KEY. THIS API KEY WILL LIKELY BE REVOKED SOON
-openai.api_key = "ENTER YOUR OWN OPENAI-API KEY"
+# USE YOUR OWN API KEY. THIS API KEY WILL LIKELY BE REVOKED SOON
+open_ai_api_key = os.environ.get("openai_key")
+openai.api_key = open_ai_api_key
+
 
 def generate_response(prompt):
     model_engine = "gpt-3.5-turbo"
